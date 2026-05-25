@@ -79,12 +79,22 @@
       </p>
     </div>
 
-    <a
-      href="#/logements/add"
-      class="bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-800 transition"
-    >
-      Ajouter un logement
-    </a>
+    [vite] connecting... client:827:9
+Error: Erreur GET
+    chargerLogements ListeLogements.svelte:17
+ListeLogements.svelte:23:15
+[vite] connected. client:931:12
+Error: Erreur POST
+    ajouterLogement AjoutLogement.svelte:30
+AjoutLogement.svelte:36:15
+Error: Erreur POST
+    ajouterLogement AjoutLogement.svelte:30
+AjoutLogement.svelte:36:15
+Error: Erreur POST
+    ajouterLogement AjoutLogement.svelte:30
+AjoutLogement.svelte:36:15
+Error: Erreur GET
+    chargerLogements ListeLogements.svelte:17
 
   </div>
 
