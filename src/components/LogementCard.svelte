@@ -3,10 +3,15 @@
   export let localisation;
   export let prix;
   export let image;
+
   export let onSupprimer;
+
+  export let lienDetail;
+  export let lienModification;
 </script>
 
 <article class="group bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200 hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
   <div class="relative overflow-hidden">
     <img
       class="w-full h-64 object-cover group-hover:scale-105 transition duration-500"
@@ -15,10 +20,6 @@
     />
 
     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-
-    <span class="absolute top-4 left-4 bg-white/90 text-blue-800 text-sm font-bold px-4 py-2 rounded-full shadow">
-      Séjour ski
-    </span>
   </div>
 
   <div class="p-6">
@@ -30,24 +31,33 @@
       📍 {localisation}
     </p>
 
-    <div class="flex items-center justify-between mb-4">
-      <div>
-        <p class="text-sm text-slate-400">À partir de</p>
-        <p class="text-3xl font-extrabold text-blue-700">
-          {prix} €
-        </p>
-      </div>
+    <p class="text-3xl font-extrabold text-blue-700 mb-6">
+      {prix} €
+    </p>
 
-      <button class="bg-blue-700 text-white px-5 py-3 rounded-xl font-semibold hover:bg-blue-800 transition">
-        Voir
+    <div class="flex flex-col gap-3">
+
+      <a
+        href={lienDetail}
+        class="bg-blue-700 text-center text-white px-5 py-3 rounded-xl font-semibold hover:bg-blue-800 transition"
+      >
+        Voir détail
+      </a>
+
+      <a
+        href={lienModification}
+        class="bg-yellow-500 text-center text-white px-5 py-3 rounded-xl font-semibold hover:bg-yellow-600 transition"
+      >
+        Modifier
+      </a>
+
+      <button
+        on:click={onSupprimer}
+        class="bg-red-600 text-white px-5 py-3 rounded-xl font-semibold hover:bg-red-700 transition"
+      >
+        Supprimer
       </button>
-    </div>
 
-    <button
-      on:click={onSupprimer}
-      class="w-full bg-red-600 text-white px-5 py-3 rounded-xl font-semibold hover:bg-red-700 transition"
-    >
-      Supprimer
-    </button>
+    </div>
   </div>
 </article>
